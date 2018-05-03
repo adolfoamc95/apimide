@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  include AsJsonRepresentations
+
   before_save { self.email = email.downcase }
   
   has_many :posts
@@ -9,6 +11,12 @@ class User < ApplicationRecord
   validates :email, presence: true, length: {maximum: 255},
                     format: { with: VALID_EMAIL_REGEX },
                     uniqueness: { case_sensitive: false}
-
+  
+  representation :basic do
+    {
+      name: name,
+      email: email
+    }
+  end
   
 end
