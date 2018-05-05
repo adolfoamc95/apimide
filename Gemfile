@@ -28,6 +28,9 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # Crea representaciones para controlar los parametros devueltos en las peticiones
 gem 'as_json_representations'
 
+# Gema que permite controlar la subida de imagenes
+gem 'carrierwave', '~> 1.0'
+
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
 

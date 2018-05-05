@@ -14,6 +14,7 @@ class User < ApplicationRecord
   
   representation :basic do
     {
+      id: id,
       name: name,
       email: email
     }

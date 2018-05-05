@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def create_params
-    params.require(:post).permit(:description, :user_id)
+    params.permit(:description, :user_id, :image)
   end
 
   def index
@@ -9,7 +9,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @user = User.find(create_params[:user_id])
+    @user = User.find(1)
     @post = @user.posts.new(create_params)
     if @post.save
       render json: @post.as_json(representation: :basic)
