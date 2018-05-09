@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_05_111231) do
+ActiveRecord::Schema.define(version: 2018_05_05_113731) do
 
   create_table "posts", force: :cascade do |t|
     t.text "description"
@@ -26,6 +26,12 @@ ActiveRecord::Schema.define(version: 2018_05_05_111231) do
     t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "password_digest"
+    t.string "auth_tokens"
+    t.string "unconfirmed_email"
+    t.string "confirmation_token"
+    t.datetime "confirmation_sent_at"
+    t.datetime "confirmed_at"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 

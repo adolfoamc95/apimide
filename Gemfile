@@ -31,6 +31,9 @@ gem 'as_json_representations'
 # Gema que permite controlar la subida de imagenes
 gem 'carrierwave', '~> 1.0'
 
+# Gema que controla la authentication, registration and sessions
+gem 'rails_jwt_auth'
+
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
 

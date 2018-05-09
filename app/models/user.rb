@@ -1,5 +1,7 @@
 class User < ApplicationRecord
   include AsJsonRepresentations
+  include RailsJwtAuth::Authenticatable
+  include RailsJwtAuth::Confirmable
 
   before_save { self.email = email.downcase }
   
